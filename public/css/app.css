@@ -10899,3 +10899,42 @@ a.text-dark:focus {
   }
 }
 
+.sidebar-left {
+  color: #fbfbfb;
+}
+
+.sidebar-left .items {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sidebar-left li {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.sidebar-left .items li:hover {
+  background-color: #3f3f3f;
+}
+
+.full-height-sidebar {
+  margin-right: 0;
+}
+
+.full-height-sidebar .col-2 {
+  position: fixed;
+  top: 55px;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: #2b3035;
+  padding-right: 0;
+}
+
+.create-user-btn {
+  margin: 0 10px 10px 10px;
+}
+

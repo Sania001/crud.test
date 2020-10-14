@@ -1,0 +1,36 @@
+$sidebar-background: #2b3035;
+$sidebar-color-text: #fbfbfb;
+$sidebar-active: #3f3f3f;
+
+.sidebar-left {
+    color: $sidebar-color-text;
+
+    .items {
+        list-style-type: none;
+        cursor: pointer;
+        padding: 0;
+    }
+    li {
+        position: relative;
+        display: block;
+        padding: .75rem 1.25rem;
+        border: 1px solid rgba(0,0,0,.125);
+    }
+    .items li:hover {
+        background-color: $sidebar-active;
+    }
+}
+.full-height-sidebar {
+
+    margin-right: 0;
+
+    .col-2 {
+        position: fixed;
+        top: 55px;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background: $sidebar-background;
+        padding-right: 0;
+    }
+}

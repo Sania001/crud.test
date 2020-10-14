@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -14,14 +15,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('App\Http\Controllers')->group(function () {
+    Route::get('/', 'AppController@index')->name('home');
 });
+
 Route::prefix('users')->namespace('App\Http\Controllers')->group(function () {
     Route::get('/test', 'UserController@test');
+    Route::get('/', 'UserController@index')->name('users.index');
+
+    Route::get('/create', 'UserController@create');
+    Route::post('/create', 'UserController@create');
+
+    Route::get('/update/{id}', 'UserController@update');
+    Route::post('/delete/{id}', 'UserController@delete');
+
+    Route::post('/save', 'UserController@save');
+    Route::post('/change/{id}', 'UserController@change');
 });
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
